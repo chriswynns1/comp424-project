@@ -41,6 +41,7 @@ CREATE TABLE IF NOT EXISTS users (
     security_answer_3 VARCHAR(255)
 );
 
+GRANT ALL PRIVILEGES ON $DB_NAME.* TO '$DB_USER'@'localhost';
 FLUSH PRIVILEGES;
 EOF
 )
