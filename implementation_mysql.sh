@@ -18,7 +18,7 @@ echo "iptables configuration complete."
 
 # MySQL database configuration
 DB_NAME="comp424"
-DB_USER="admin"
+DB_USER="dbadmin"
 DB_PASSWORD="pleasechangeme123"
 
 # SQL queries to create database and table
