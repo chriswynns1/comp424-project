@@ -1,0 +1,154 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Centering content and creating a focused container */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0c192c; /* Dark Blue */
+    min-height: 100vh; /* Full viewport height */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Ensure proper alignment */
+    justify-content: center; /* Horizontal centering */
+    align-items: center; /* Vertical centering */
+    overflow: auto; /* Allow scrolling if content overflows */
+}
+/*Container for css background effects*/
+.bubble-container{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+/*Set up bubbles*/
+.bubbles
+{
+    position: relative;
+    display: flex;
+}
+.bubbles span
+{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background: #4fc3dc;
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px #4fc3dc44,
+        0 0 50px #4fc3dc,
+        0 0 100px #4fc3dc;
+    animation: animate 15s linear infinite;
+    animation-duration: calc(250s/var(--i));
+}
+.bubbles span:nth-child(even)
+{
+    background: #ff2d75;
+    box-shadow: 0 0 0 10px #ff2d7544,
+        0 0 50px #ff2d75,
+        0 0 100px #ff2d75;
+}
+/*define animations, moving bubbles*/
+@keyframes animate
+{
+    0%
+    {
+        transform: translateY(100vh) scale(0);
+    }
+    100%
+    {
+        transform: translateY(-10vh) scale(1);
+    }
+}
+/* Adding extra space on top and bottom with a wrapper */
+.wrapper {
+    flex-grow: 1; /* Allow flexibility for vertical centering */
+    display: flex;
+    justify-content: center; /* Center the container horizontally */
+    align-items: center; /* Align container vertically within the wrapper */
+    padding-top: 20px; /* Additional space on top */
+    padding-bottom: 20px; /* Additional space on bottom */
+}
+
+/* Container for centering and styling the form */
+.container {
+    width: 400px; /* Adjusted to accommodate additional fields */
+    padding: 30px;
+    border: 1px solid #ccc; /* Light gray border for subtle structure */
+    border-radius: 10px; /* Rounded corners */
+    background-color: #fff; /* White background for clear contrast */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    text-align: left; /* Align text and labels to the left */
+    overflow: visible; /* Ensure content is not cut off */
+}
+
+/* Headings within the container */
+h1 {
+    color: #333; /* Dark gray for contrast */
+    text-align: center; /* Centered heading */
+}
+
+/* Label styling to align with form fields */
+label {
+    font-weight: bold; /* Bold labels for emphasis */
+    display: block; /* Ensures labels appear on separate lines */
+    margin-top: 10px; /* Spacing between elements */
+}
+
+/* Input fields */
+input[type="text"], input[type="email"], input[type="password"], input[type="date"] {
+    width: 100%; /* Full width for consistent alignment */
+    padding: 10px; /* Comfortable padding */
+    border: 1px solid #ccc; /* Consistent border style */
+    border-radius: 5px; /* Slightly rounded corners */
+    box-sizing: border-box; /* Ensures consistent sizing */
+}
+
+/* Select dropdowns */
+select {
+    width: 100%; /* Full width for uniformity */
+    padding: 10px; /* Consistent padding */
+    border: 1px solid #ccc; /* Border to match input fields */
+    border-radius: 5px; /* Rounded corners */
+    box-sizing: border-box; /* Consistent box model */
+}
+
+/* Submit button styling */
+input[type="submit"] {
+    background-color: #4CAF50; /* Green background for a positive vibe */
+    color: white; /* White text for contrast */
+    padding: 10px 20px; /* Comfortable padding */
+    border: none; /* No additional border */
+    border-radius: 5px; /* Rounded corners for smooth look */
+    cursor: pointer; /* Hand cursor on hover */
+    margin-top: 20px; /* Space between the last field and submit button */
+}
+
+/* Hover effect for the submit button */
+input[type="submit"]:hover {
+    background-color: #45a049; /* Slightly darker green on hover */
+}
+
+/* Indicator for password strength */
+#password-strength {
+    font-size: 0.9em; /* Slightly smaller text for strength indicator */
+    color: gray; /* Default color */
+}
+
+/* Separate lines for breaks in form */
+br {
+    display: block; /* Explicitly ensure breaks create new lines */
+    margin-bottom: 10px; /* Adequate spacing between lines */
+}
+
+/* Hover effect for links */
+a {
+    color: #0066cc; /* Blue links */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline; /* Underline on hover */
+}

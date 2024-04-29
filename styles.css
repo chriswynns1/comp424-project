@@ -1,0 +1,117 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Centering content and creating a focused container */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0c192c; /* Dark Blue */
+    min-height: 100vh; /* Full viewport height */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Ensure proper alignment */
+    justify-content: center; /* Horizontally centered */
+    align-items: center; /* Vertically centered */
+    overflow: hidden;
+}
+/*Container for css background effects*/
+.bubble-container{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+/*Set up bubbles*/
+.bubbles
+{
+    position: relative;
+    display: flex;
+}
+.bubbles span
+{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background: #4fc3dc;
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px #4fc3dc44,
+        0 0 50px #4fc3dc,
+        0 0 100px #4fc3dc;
+    animation: animate 15s linear infinite;
+    animation-duration: calc(1000s/var(--i));
+}
+.bubbles span:nth-child(even)
+{
+    background: #ff2d75;
+    box-shadow: 0 0 0 10px #ff2d7544,
+        0 0 50px #ff2d75,
+        0 0 100px #ff2d75;
+}
+/*define animations, moving bubbles*/
+@keyframes animate
+{
+    0%
+    {
+        transform: translateY(100vh) scale(0);
+    }
+    100%
+    {
+        transform: translateY(-10vh) scale(1);
+    }
+}
+/* Adding extra space on top and bottom with a wrapper */
+.wrapper {
+    flex-grow: 1; /* Allow flexibility for vertical centering */
+    display: flex;
+    justify-content: center; /* Center the container horizontally */
+    align-items: center; /* Align container vertically within the wrapper */
+    padding-top: 10%; /* Additional space on top */
+    
+}
+.container {
+    width: 300px; /* Fixed width for the box */
+    padding: 20px; /* Inner padding */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 10px; /* Rounded corners */
+    background-color: #ffffff; /* White background for the box */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    text-align: center; /* Centered text */
+}
+
+h1 {
+    color: #333; /* Dark gray color for the heading */
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    text-align: left; /* Left-align labels */
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%; /* Full width */
+    padding: 8px; /* Inner padding for inputs */
+    box-sizing: border-box; /* Include padding and border in width calculation */
+}
+
+input[type="submit"] {
+    background-color: #4CAF50; /* Green background for the submit button */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px; /* Rounded corners for the button */
+    margin-top: 10px; /* Margin between form elements */
+}
+
+a {
+    color: #0066cc; /* Blue color for links */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
